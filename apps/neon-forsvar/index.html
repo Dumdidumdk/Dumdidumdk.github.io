@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flyttet til brixel.dk</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://brixel.dk/neon-forsvar/">
+<script>
+// Samme sti, query og hash på brixel.dk. /apps/... var den gamle adresse til hjemmesiden.
+(function () {
+  var sti = location.pathname.replace(/^\/apps(?=\/|$)/, '') || '/';
+  location.replace('https://brixel.dk' + sti + location.search + location.hash);
+})();
+</script>
+<noscript><meta http-equiv="refresh" content="0; url=https://brixel.dk/neon-forsvar/"></noscript>
+<style>
+:root{color-scheme:light dark;--bg:#FFF7EE;--ink:#1f2430;--accent:#FF7A45}
+@media (prefers-color-scheme:dark){:root{--bg:#16181d;--ink:#eceef2}}
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--bg);color:var(--ink);font:18px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center;padding:0 16px}
+a{color:var(--accent);font-weight:600}
+</style>
+</head>
+<body>
+<main>
+<h1>Siden er flyttet</h1>
+<p>Mine apps og programmer ligger nu på <a id="ny" href="https://brixel.dk/neon-forsvar/">brixel.dk</a>.</p>
+</main>
+<script>document.getElementById('ny').href = 'https://brixel.dk' + (location.pathname.replace(/^\/apps(?=\/|$)/, '') || '/') + location.search + location.hash;</script>
+</body>
+</html>
