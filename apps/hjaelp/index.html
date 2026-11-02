@@ -3,9 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Midlertidigt nede</title>
+<title>Flyttet til brixel.dk</title>
 <meta name="robots" content="noindex">
 <link rel="canonical" href="https://brixel.dk/hjaelp/">
+<script>
+// Samme sti, query og hash på brixel.dk. /apps/... var den gamle adresse til hjemmesiden.
+(function () {
+  var sti = location.pathname.replace(/^\/apps(?=\/|$)/, '') || '/';
+  location.replace('https://brixel.dk' + sti + location.search + location.hash);
+})();
+</script>
+<noscript><meta http-equiv="refresh" content="0; url=https://brixel.dk/hjaelp/"></noscript>
 <style>
 :root{color-scheme:light dark;--bg:#FFF7EE;--ink:#1f2430;--accent:#FF7A45}
 @media (prefers-color-scheme:dark){:root{--bg:#16181d;--ink:#eceef2}}
@@ -15,9 +23,8 @@ a{color:var(--accent);font-weight:600}
 </head>
 <body>
 <main>
-<h1>Midlertidigt nede</h1>
-<p>Min server på brixel.dk er nede lige nu. Jeg arbejder på at få den op at køre igen.</p>
-<p>Prøv igen senere: <a id="ny" href="https://brixel.dk/">brixel.dk</a></p>
+<h1>Siden er flyttet</h1>
+<p>Mine apps og programmer ligger nu på <a id="ny" href="https://brixel.dk/hjaelp/">brixel.dk</a>.</p>
 </main>
 <script>document.getElementById('ny').href = 'https://brixel.dk' + (location.pathname.replace(/^\/apps(?=\/|$)/, '') || '/') + location.search + location.hash;</script>
 </body>
